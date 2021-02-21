@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Reciepe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="container">
+        <header>
+            <div>
+                <h1>LOGO</h1>
+            </div>
+            <div>
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+        </header>
+        <section>
+            <h3>My Show Case Image Area</h3>
+        </section>
+        <main>
+            <div class="dish">
+                <div class="dish_image">
+                    <img src="" alt="">
+                </div>
+                <div class="dish_detail">
+
+                </div>
+            </div>
+
+            <div class="dish">
+                <div class="dish_image">
+                    <img src="" alt="">
+                </div>
+                <div class="dish_detail">
+
+                </div>
+            </div>
+
+            <div class="dish">
+                <div class="dish_image">
+                    <img src="" alt="">
+                </div>
+                <div class="dish_detail">
+
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div>
+                <p>Power by: Forkify API</p>
+                <P>Coded from strach by: <span>Boakai Dorbor Kamara</span></P>
+            </div>
+        </footer>
+    </div>
+    
+
+
+<script>
+
+    fetch('https://forkify-api.herokuapp.com/api/search?q=pizza')
+    .then(res => res.json())
+    .then((data)=>{
+        // console.log(data);
+        let dish_detail = data;
+        console.log(dish_detail);
+    })
+   
+
+
+</script>
+</body>
+</html>
