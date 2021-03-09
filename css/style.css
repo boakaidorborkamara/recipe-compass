@@ -5,11 +5,13 @@
 
 body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: chocolate;
+    background-color: black;
+    background-image: url('../img/foodbg');
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
 }
 
 #container{
@@ -20,13 +22,22 @@ body{
 }
 
 header{
-    background-color: black;
-    color: rgb(243, 186, 29);
+    background-color: tomato;
+    color: black;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 30px 20px 30px;
 }
+
+#logoArea{
+    width: 50%;
+}
+
+#logoArea img{
+    width: 40%;
+}
+
 
 ul li{
     display: inline-block;
@@ -36,7 +47,7 @@ ul li{
 
 section{
     height: 80vh;
-    background-color: rgb(243, 186, 29) ;
+    background-color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -44,7 +55,7 @@ section{
 }
 
 main{
-    background-color: black;
+    background-color: tomato;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     padding: 25px
@@ -52,10 +63,10 @@ main{
 }
 
 main .dish{
-    width: 250px;
-    height: 300px;
+    height: 350px;
+    width: 95% ;
     background-color: burlywood;
-    
+    margin-bottom: 20px;
 }
 
 .dish_image{
@@ -64,8 +75,21 @@ main .dish{
 }
 
 .dish_detail{
-    background-color: cyan;
+    box-sizing: border-box;
+    background-color: white;
     height: 40%;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 15px;
+}
+
+.dish_detail p{
+    margin-bottom: 10px;
+}
+
+.dish_detail .title{
+    font-size: 1.2em;
+    font-weight: bold;
 }
 
 footer{
