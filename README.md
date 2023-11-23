@@ -1,2 +1,2 @@
-# Forkify-API-resturant-website
-A restaurant website base on the the Forkify API
+# Recipe Compass
+An app that provides recipe ideas.
