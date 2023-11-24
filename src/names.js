@@ -1,0 +1,1 @@
+export let names = ["James", "Gaye", "Albin", "Karmoh"]
