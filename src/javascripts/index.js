@@ -1,4 +1,8 @@
-import { names } from "./names";
+import home_page from "./components/home-page";
+import { render } from "./util/renderElements";
 import "../css/style.css"
-// import {food1} from
-console.log("working", names);
+
+window.addEventListener("load", ()=>{
+    render(home_page());
+})
+
