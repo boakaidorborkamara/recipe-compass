@@ -1,5 +1,14 @@
 body{
     font-family: 'Caveat', cursive;
+}
+
+.home-page{
     background-image: url("../assets/images/food1.jpg");
     background-size: cover;
+}
+
+#search-bar-section{
+    background-image: url("../assets/images/food2.jpg");
+    background-size:cover;
+    background-repeat: no-repeat;
 }

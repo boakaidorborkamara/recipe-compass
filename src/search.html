@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Compass</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container">
+                <a class="navbar-brand" href="#"><span class="fw-bolder">Recipe</span>Compass</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Recipes</a>
+                        </li>
+                    </ul>
+                    <!-- <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form> -->
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    
+    <main>
+        <div style="height: 100vh;">
+            <!-- recipe search section  -->
+            <section class="bg-dark h-50 d-flex flex-column justify-content-center align-items-center" id="search-bar-section">
+                <div class="container d-flex flex-column justify-content-center align-items-center">
+                    <h1 class="text-dark fw-bolder">Let's explore recipes</h1>
+                    <form class="form-inline d-flex w-50">
+                        <input class="form-control mr-sm-2 rounded-0 shadow-sm" type="search" placeholder="tomato, potatoe, pizza" aria-label="Search">
+                        <button class="btn btn-success my-2 my-sm-0 rounded-0" type="submit">Search</button>
+                    </form>
+                </div>
+            </section>
+
+            <!-- recipe cards  -->
+            <section class="container pb-5">
+                <h2 class="my-5 fw-bolder">Recipes List for <span class="text-success">Pizza</span></h2>
+
+                <!-- cards  -->
+                <div class="d-flex gap-5">
+                    <div class="card" style="width: 18rem;">
+                        <div style="height: 70%;">
+                            <img class="card-img-top" src="./assets/images/food3.jpg" alt="Card image cap">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Recipe Name</h5>
+                            <p class="card-text">Recipe creator</p>
+                            <div class="d-flex gap-2">
+                                <button type="button" class="btn btn-secondary col-6 ">Detail</button>
+                                <button type="" class="btn col-6 btn-success">Recipe URL</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card" style="width: 18rem;">
+                        <div style="height: 70%;">
+                            <img class="card-img-top" src="./assets/images/food3.jpg" alt="Card image cap">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Recipe Name</h5>
+                            <p class="card-text">Recipe creator</p>
+                            <div class="d-flex gap-2">
+                                <button type="button" class="btn btn-secondary col-6 ">Detail</button>
+                                <button type="" class="btn col-6 btn-success">Recipe URL</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card" style="width: 18rem;">
+                        <div style="height: 70%;">
+                            <img class="card-img-top" src="./assets/images/food3.jpg" alt="Card image cap">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Recipe Name</h5>
+                            <p class="card-text">Recipe creator</p>
+                            <div class="d-flex gap-2">
+                                <button type="button" class="btn btn-secondary col-6 ">Detail</button>
+                                <button type="" class="btn col-6 btn-success">Recipe URL</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card" style="width: 18rem;">
+                        <div style="height: 70%;">
+                            <img class="card-img-top" src="./assets/images/food3.jpg" alt="Card image cap">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Recipe Name</h5>
+                            <p class="card-text">Recipe creator</p>
+                            <div class="d-flex gap-2">
+                                <button type="button" class="btn btn-secondary col-6 ">Detail</button>
+                                <button type="" class="btn col-6 btn-success">Recipe URL</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <script src="../dist/main.js"></script>
+</body>
+</html>
