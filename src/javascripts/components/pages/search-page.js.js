@@ -1,5 +1,4 @@
 import { searchBar } from "../search-bar";
-import { cards } from "../cards";
 
 export const searchPage = ()=>{
     let parent_container = document.createElement("div");

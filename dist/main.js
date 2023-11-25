@@ -10,13 +10,33 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./src/javascripts/components/home-page.js":
-/*!*************************************************!*\
-  !*** ./src/javascripts/components/home-page.js ***!
-  \*************************************************/
+/***/ "./src/javascripts/components/pages/home-page.js":
+/*!*******************************************************!*\
+  !*** ./src/javascripts/components/pages/home-page.js ***!
+  \*******************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar home_page = function home_page() {\n  // section \n  var section = document.createElement(\"section\");\n  section.classList.add(\"d-flex\", \"flex-column\", \"justify-content-center\", \"align-items-center\");\n\n  // heading 1 \n  var h1 = document.createElement(\"h1\");\n  h1.classList.add(\"mb-4\", \"fw-bolder\");\n  h1.innerText = \"Find your Recipes\";\n\n  //button \n  var button = document.createElement(\"button\");\n  button.setAttribute(\"type\", \"button\");\n  button.classList.add(\"btn\", \"btn-success\", \"shadow-sm\");\n  button.innerText = \"SEARCH RECIPE\";\n\n  // add children elements to section \n  section.appendChild(h1);\n  section.appendChild(button);\n  return section;\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (home_page);\n\n//# sourceURL=webpack://recipe-compass/./src/javascripts/components/home-page.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar homePage = function homePage() {\n  var parent_div = document.createElement(\"div\");\n  parent_div.classList.add(\"d-flex\", \"justify-content-center\", \"align-items-center\");\n  parent_div.style.height = \"calc(100vh - 7vh\";\n\n  // section \n  var section = document.createElement(\"section\");\n  section.classList.add(\"d-flex\", \"flex-column\", \"justify-content-center\", \"align-items-center\");\n\n  // heading 1 \n  var h1 = document.createElement(\"h1\");\n  h1.classList.add(\"mb-4\", \"fw-bolder\");\n  h1.innerText = \"Find your Recipes\";\n\n  //button \n  var button = document.createElement(\"button\");\n  button.setAttribute(\"type\", \"button\");\n  button.setAttribute(\"id\", \"search-btn\");\n  button.classList.add(\"btn\", \"btn-success\", \"shadow-sm\");\n  button.innerText = \"SEARCH RECIPE\";\n\n  // add children elements to section \n  section.appendChild(h1);\n  section.appendChild(button);\n  parent_div.appendChild(section);\n  return parent_div;\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (homePage);\n\n//# sourceURL=webpack://recipe-compass/./src/javascripts/components/pages/home-page.js?");
+
+/***/ }),
+
+/***/ "./src/javascripts/components/pages/search-page.js.js":
+/*!************************************************************!*\
+  !*** ./src/javascripts/components/pages/search-page.js.js ***!
+  \************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   searchPage: () => (/* binding */ searchPage)\n/* harmony export */ });\n/* harmony import */ var _search_bar__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../search-bar */ \"./src/javascripts/components/search-bar.js\");\n\nvar searchPage = function searchPage() {\n  var parent_container = document.createElement(\"div\");\n  parent_container.style.height = \"100vh\";\n  var recipe_cards_container = document.createElement(\"div\");\n  recipe_cards_container.classList.add(\"d-flex\", \"gap-5\");\n\n  // add children to parents\n  parent_container.appendChild((0,_search_bar__WEBPACK_IMPORTED_MODULE_0__.searchBar)());\n  parent_container.appendChild(recipe_cards_container);\n  return parent_container;\n};\n\n//# sourceURL=webpack://recipe-compass/./src/javascripts/components/pages/search-page.js.js?");
+
+/***/ }),
+
+/***/ "./src/javascripts/components/search-bar.js":
+/*!**************************************************!*\
+  !*** ./src/javascripts/components/search-bar.js ***!
+  \**************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   searchBar: () => (/* binding */ searchBar)\n/* harmony export */ });\nvar searchBar = function searchBar() {\n  // section ele\n  var section = document.createElement(\"section\");\n  section.classList.add(\"bg-dark\", \"h-50\", \"d-flex\", \"flex-column\", \"justify-content-center\", \"align-items-center\");\n  section.setAttribute(\"id\", \"search-bar-section\");\n\n  // div \n  var div = document.createElement(\"div\");\n  div.classList.add(\"container\", \"d-flex\", \"flex-column\", \"justify-content-center\", \"align-items-center\");\n\n  // heading h1\n  var h1 = document.createElement(\"h1\");\n  h1.classList.add(\"text-dark\", \"fw-bolder\");\n  h1.innerText = \"Let's explore recipes\";\n\n  //form\n  var form = document.createElement(\"form\");\n  form.classList.add(\"form-inline\", \"d-flex\", \"w-50\");\n\n  // input \n  var input = document.createElement(\"input\");\n  input.classList.add(\"form-control\", \"mr-sm-2\", \"rounded-0\", \"shadow-sm\");\n  input.setAttribute(\"placeholder\", \"tomato, potatoe, pizza\");\n  input.setAttribute(\"aria-label\", \"Search\");\n\n  //button\n  var button = document.createElement(\"button\");\n  button.classList.add(\"btn\", \"btn-success\", \"my-2\", \"my-sm-0\", \"rounded-0\");\n  button.setAttribute(\"type\", \"submit\");\n\n  // append children elements \n  form.appendChild(input);\n  form.appendChild(button);\n  div.appendChild(h1);\n  div.appendChild(form);\n  section.appendChild(div);\n  return section;\n};\n\n//# sourceURL=webpack://recipe-compass/./src/javascripts/components/search-bar.js?");
 
 /***/ }),
 
@@ -26,7 +46,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _components_home_page__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/home-page */ \"./src/javascripts/components/home-page.js\");\n/* harmony import */ var _util_renderElements__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./util/renderElements */ \"./src/javascripts/util/renderElements.js\");\n/* harmony import */ var _css_style_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../css/style.css */ \"./src/css/style.css\");\n\n\n\nwindow.addEventListener(\"load\", function () {\n  (0,_util_renderElements__WEBPACK_IMPORTED_MODULE_1__.render)((0,_components_home_page__WEBPACK_IMPORTED_MODULE_0__[\"default\"])());\n});\n\n//# sourceURL=webpack://recipe-compass/./src/javascripts/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _components_pages_home_page__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/pages/home-page */ \"./src/javascripts/components/pages/home-page.js\");\n/* harmony import */ var _components_pages_search_page_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/pages/search-page.js */ \"./src/javascripts/components/pages/search-page.js.js\");\n/* harmony import */ var _util_renderElements__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./util/renderElements */ \"./src/javascripts/util/renderElements.js\");\n/* harmony import */ var _css_style_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../css/style.css */ \"./src/css/style.css\");\n\n\n\n\nvar home_btn = document.getElementById(\"\");\nvar recipes_btn = document.getElementById(\"\");\nwindow.addEventListener(\"load\", function () {\n  (0,_util_renderElements__WEBPACK_IMPORTED_MODULE_2__.render)((0,_components_pages_home_page__WEBPACK_IMPORTED_MODULE_0__[\"default\"])());\n});\ndocument.addEventListener(\"click\", function (e) {\n  console.log(e.target);\n  var clicked_element = e.target;\n  if (clicked_element.id === \"search-btn\") {\n    console.log(\"got it\");\n    console.log((0,_components_pages_search_page_js__WEBPACK_IMPORTED_MODULE_1__.searchPage)());\n    (0,_util_renderElements__WEBPACK_IMPORTED_MODULE_2__.render)((0,_components_pages_search_page_js__WEBPACK_IMPORTED_MODULE_1__.searchPage)());\n  }\n});\n\n//# sourceURL=webpack://recipe-compass/./src/javascripts/index.js?");
 
 /***/ }),
 
@@ -36,7 +56,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _com
   \************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   render: () => (/* binding */ render)\n/* harmony export */ });\nvar render = function render(component) {\n  var content_area = document.getElementById(\"content\");\n  content_area.appendChild(component);\n};\n\n//# sourceURL=webpack://recipe-compass/./src/javascripts/util/renderElements.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   render: () => (/* binding */ render)\n/* harmony export */ });\nvar render = function render(component) {\n  var content_area = document.getElementById(\"content\");\n  while (content_area.firstElementChild) {\n    console.log(\"ele\", content_area.firstElementChild);\n    content_area.removeChild(content_area.firstElementChild);\n  }\n  content_area.appendChild(component);\n  //   console.log(\"working\");\n  console.log(content_area.firstElementChild);\n};\n\n//# sourceURL=webpack://recipe-compass/./src/javascripts/util/renderElements.js?");
 
 /***/ }),
 
