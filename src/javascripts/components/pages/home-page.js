@@ -1,4 +1,4 @@
-const home_page = ()=>{
+const homePage = ()=>{
     // section 
     let section = document.createElement("section");
     section.classList.add("d-flex", "flex-column" ,"justify-content-center", "align-items-center");
