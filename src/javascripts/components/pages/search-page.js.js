@@ -1,14 +1,19 @@
 import { searchBar } from "../search-bar";
+import { searchResultTitle } from "../search-result-title";
+import { cards } from "../cards";
 
 export const searchPage = ()=>{
     let parent_container = document.createElement("div");
     parent_container.style.height = "100vh";
 
     let recipe_cards_container = document.createElement("div");
-    recipe_cards_container.classList.add("d-flex", "gap-5");
+    recipe_cards_container.classList.add("d-flex", "gap-5", "container");
 
     // add children to parents
+    recipe_cards_container.appendChild(cards());
+
     parent_container.appendChild(searchBar());
+    parent_container.appendChild(searchResultTitle());
     parent_container.appendChild(recipe_cards_container);
 
     return parent_container;

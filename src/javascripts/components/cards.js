@@ -30,18 +30,18 @@ export const cards = ()=>{
 
     // card button div
     let btn_div = document.createElement("div");
-    btn_div.classList.add("d-flex gap-2");
+    btn_div.classList.add("d-flex", "gap-2");
 
     //detail button
     let detail_btn = document.createElement("button");
     detail_btn.setAttribute("type", "button");
-    detail_btn.classList.add("btn btn-secondary col-6 ");
+    detail_btn.classList.add("btn", "btn-secondary", "col-6");
     detail_btn.innerText = "Detail";
 
     //recipe url button
     let recipe_url_btn = document.createElement("button");
     recipe_url_btn.setAttribute("type", "button");
-    recipe_url_btn.classList.add("btn btn-success col-6 ");
+    recipe_url_btn.classList.add("btn", "btn-success", "col-6");
     recipe_url_btn.innerText = "Recipe URL";
 
     //add children to parents
