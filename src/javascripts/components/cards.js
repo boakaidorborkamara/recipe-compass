@@ -40,18 +40,19 @@ export const cards = (recipe)=>{
     //detail button
     let detail_btn = document.createElement("button");
     detail_btn.setAttribute("type", "button");
-    detail_btn.classList.add("btn", "btn-secondary", "col-6");
+    detail_btn.classList.add("btn", "btn-success", "col-12");
     detail_btn.innerText = "Detail";
+    detail_btn.id = `${recipe.id}`;
 
     //recipe url button
-    let recipe_url_btn = document.createElement("button");
-    recipe_url_btn.setAttribute("type", "button");
-    recipe_url_btn.classList.add("btn", "btn-success", "col-6");
-    recipe_url_btn.innerText = "Recipe URL";
+    // let recipe_url_btn = document.createElement("button");
+    // recipe_url_btn.setAttribute("type", "button");
+    // recipe_url_btn.classList.add("btn", "btn-success", "col-6");
+    // recipe_url_btn.innerText = "Recipe URL";
 
     //add children to parents
     btn_div.appendChild(detail_btn);
-    btn_div.appendChild(recipe_url_btn);
+    // btn_div.appendChild(recipe_url_btn);
    
 
     card_body_div.appendChild(h5);
