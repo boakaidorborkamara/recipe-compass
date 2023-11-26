@@ -16,11 +16,21 @@ document.addEventListener("click", async (e)=>{
     console.log(e.target);
     let clicked_element = e.target
     if(clicked_element.id === "search-btn"){
-        console.log("got it");
         let pizza_recipes = await fetchRecipes(
           `${baseURL}/recipes?search=pizza&key=30688396-ef45-4237-ab82-58f2e7c5486c`
         );
         
+        render(searchPage(pizza_recipes.data.recipes));
+    }
+
+    if(clicked_element.id === "home"){
+        render(homePage());
+    }
+
+    if(clicked_element.id === "recipe"){
+        let pizza_recipes = await fetchRecipes(
+          `${baseURL}/recipes?search=pizza&key=30688396-ef45-4237-ab82-58f2e7c5486c`
+        );
         render(searchPage(pizza_recipes.data.recipes));
     }
 })
