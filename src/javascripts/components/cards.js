@@ -1,4 +1,4 @@
-export const cards = ()=>{
+export const cards = (recipe)=>{
     // card div 
     let card_div = document.createElement("div");
     card_div.classList.add("card");
@@ -6,31 +6,36 @@ export const cards = ()=>{
 
     // card image div
     let card_image_div = document.createElement("div");
-    card_image_div.style.height = "70%";
+    card_image_div.classList.add("bg-primary")
+    card_image_div.style.height = "200px";
 
     // card image
     let card_image = document.createElement("img");
-    card_image.classList.add("card-img-top");
-    card_image.setAttribute("src", "./assets/images/food3.jpg");
+    card_image.classList.add("card-img-top"); 
+    card_image.setAttribute("src", `${recipe.image_url}`);
     card_image.setAttribute("alt", "Card image");
+    card_image.setAttribute("width", "100%");
+    card_image.setAttribute("height", "100%");
 
     //card body
     let card_body_div = document.createElement("div");
     card_body_div.classList.add("card-body");
+    card_body_div.setAttribute("height", "10px");
 
     // h5
     let h5 = document.createElement("h5");
-    h5.classList.add("card-title");
-    h5.innerHTML = "Recipe Name";
+    h5.classList.add("card-title","fw-bolder");
+    h5.innerHTML = `${recipe.title}`;
 
-    // h5
+    // p
     let p = document.createElement("p");
-    h5.classList.add("card-text");
-    h5.innerHTML = "Recipe Name";
+    p.classList.add("card-text");
+    p.innerHTML = `Publisher: ${recipe.publisher}`;
 
     // card button div
     let btn_div = document.createElement("div");
-    btn_div.classList.add("d-flex", "gap-2");
+    btn_div.classList.add("d-flex", "gap-2", "container", "pb-4");
+    btn_div.setAttribute("height", "400px");
 
     //detail button
     let detail_btn = document.createElement("button");
@@ -47,15 +52,17 @@ export const cards = ()=>{
     //add children to parents
     btn_div.appendChild(detail_btn);
     btn_div.appendChild(recipe_url_btn);
+   
 
     card_body_div.appendChild(h5);
     card_body_div.appendChild(p);
-    card_body_div.appendChild(btn_div);
+    // card_body_div.appendChild(btn_div);
 
     card_image_div.appendChild(card_image);
 
     card_div.appendChild(card_image_div);
     card_div.appendChild(card_body_div);
+    card_div.appendChild(btn_div);
 
     //   return 
     return card_div;
