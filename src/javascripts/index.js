@@ -42,4 +42,14 @@ document.addEventListener("click", async (e) => {
 
     hideBodyBackgroundImage();
   }
+
+  // if (clicked_element.id === "submit-search-btn") {
+  //   let recipe_form = document.getElementById("submit-search-btn");
+  //   console.log(recipe_form);
+  //   console.log("submitting", recipe_form);
+  //   recipe_form.addEventListener("submit", (e) => {
+  //     e.preventDefault();
+  //     console.log("working");
+  //   });
+  // }
 });

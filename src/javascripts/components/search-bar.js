@@ -29,17 +29,20 @@ export const searchBar = () => {
   //form
   let form = document.createElement("form");
   form.classList.add("form-inline", "d-flex", "w-50");
+  form.id = "recipe-form";
 
   // input
   let input = document.createElement("input");
   input.classList.add("form-control", "mr-sm-2", "rounded-0", "shadow-sm");
   input.setAttribute("placeholder", "tomato, potatoe, pizza");
   input.setAttribute("aria-label", "Search");
+  input.setAttribute("required", "");
 
   //button
   let button = document.createElement("button");
   button.classList.add("btn", "btn-success", "my-2", "my-sm-0", "rounded-0");
   button.setAttribute("type", "submit");
+  button.id = "submit-search-btn";
   button.innerText = "Search";
 
   // append children elements
