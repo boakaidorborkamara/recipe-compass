@@ -2,7 +2,7 @@ body{
     font-family: 'Caveat', cursive;
 }
 
-.home-page{
+#home-page{
     background-image: url("../assets/images/food1.jpg");
     background-size: cover;
 }
