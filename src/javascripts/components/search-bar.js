@@ -2,7 +2,6 @@ export const searchBar = () => {
   // section ele
   let section = document.createElement("section");
   section.classList.add(
-    "bg-dark",
     "h-50",
     "d-flex",
     "flex-column",
