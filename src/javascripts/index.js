@@ -2,6 +2,9 @@ import { displayRecipesPage } from "./util/displayRecipes.js";
 import { displayHomePage } from "./util/displayHomePage.js";
 import { getDefaultRecipes } from "./util/getDefaultRecipes.js";
 import { searchForRecipe } from "./util/searchForRecipe.js";
+import { getRecipeDetails } from "./util/getRecipeDetails.js";
+import { fetchRecipes } from "./util/fetchRecipes.js";
+import { baseURL } from "../config/config.js";
 import "../css/style.css";
 
 // render home page when browser loads
@@ -28,17 +31,16 @@ document.addEventListener("click", async (e) => {
   // recipe menu option
   if (clicked_element.id === "recipe") {
     let default_recipes = await getDefaultRecipes();
-    displayRecipesPage(default_recipes.data.recipes);
+    displayRecipesPage(default_recipes.data.recipes, searchForRecipe);
+  }
 
-    // display search page
-    // render(
-    //   recipesPage(default_recipes.data.recipes, async (e) => {
-    //     e.preventDefault();
-    //     let recipe_form = document.getElementById("recipe-form");
-    //     let search_input_text = getSearchInputText(recipe_form);
-    //     let search_results = await searchForRecipe(search_input_text);
-    //     render(searchPage(search_results.data.recipes));
-    //   })
-    // );
+  // recipe cards details btn
+  if (clicked_element.classList.contains("recipe-details-btn")) {
+    let selected_recipe_id = clicked_element.id;
+    let recipe_details = await fetchRecipes(
+      `${baseURL}/recipes/${selected_recipe_id}?key=30688396-ef45-4237-ab82-58f2e7c5486c`
+    );
+    console.log("btn", clicked_element, selected_recipe_id);
+    console.log("details", recipe_details);
   }
 });

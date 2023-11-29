@@ -39,7 +39,12 @@ export const cards = (recipe) => {
   //detail button
   let detail_btn = document.createElement("button");
   detail_btn.setAttribute("type", "button");
-  detail_btn.classList.add("btn", "btn-success", "col-12");
+  detail_btn.classList.add(
+    "btn",
+    "btn-success",
+    "col-12",
+    "recipe-details-btn"
+  );
   detail_btn.innerText = "Detail";
   detail_btn.id = `${recipe.id}`;
 
