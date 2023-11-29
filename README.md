@@ -13,7 +13,7 @@ An app that provides recipe ideas. I started this project back when I started le
 - [x] Display Welcome
 - [x] Navigate between pages
 - [x] Display default recipes
-- [ ] Search for recipes
-- [ ] Display recipes based on user search
+- [x] Search for recipes
+- [x] Display recipes based on user search
 - [ ] See details for each recipe option
 - [ ] Bookmark recipe
