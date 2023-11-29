@@ -1,4 +1,4 @@
-export const searchBar = () => {
+export const searchBar = (callback) => {
   // section ele
   let section = document.createElement("section");
   section.classList.add(
@@ -29,6 +29,7 @@ export const searchBar = () => {
   let form = document.createElement("form");
   form.classList.add("form-inline", "d-flex", "w-50");
   form.id = "recipe-form";
+  form.onsubmit = callback;
 
   // input
   let input = document.createElement("input");

@@ -1,67 +1,44 @@
-import { appState } from "../config/config.js";
-import homePage from "./components/pages/home-page";
-import { searchPage } from "./components/pages/search-page.js";
-import { render } from "./util/renderElements";
+import { displayRecipesPage } from "./util/displayRecipes.js";
+import { displayHomePage } from "./util/displayHomePage.js";
 import { getDefaultRecipes } from "./util/getDefaultRecipes.js";
-import { showBodyBackgroundImage } from "./util/showBodyBackgroundImage.js";
-import { hideBodyBackgroundImage } from "./util/hideBodyBackgroundImage.js";
-import { getSearchInputText, searchForRecipe } from "./util/getSearchedItem.js";
+import { searchForRecipe } from "./util/searchForRecipe.js";
 import "../css/style.css";
 
-const home_btn = document.getElementById("");
-const recipes_btn = document.getElementById("");
-let state = "";
-
+// render home page when browser loads
 window.addEventListener("load", () => {
-  render(homePage());
-  showBodyBackgroundImage();
-  state = "search";
+  displayHomePage();
 });
 
 document.addEventListener("click", async (e) => {
-  console.log(e.target);
   let clicked_element = e.target;
-  console.log(state);
 
+  // search btn on home page
   if (clicked_element.id === "search-btn") {
+    // recipes
     let default_recipes = await getDefaultRecipes();
-
-    // display search page with results for default recipes
-    render(searchPage(default_recipes.data.recipes));
-
-    hideBodyBackgroundImage();
+    // display recipe page
+    displayRecipesPage(default_recipes.data.recipes, searchForRecipe);
   }
 
+  // home menu option
   if (clicked_element.id === "home") {
-    render(homePage());
-    showBodyBackgroundImage();
+    displayHomePage();
   }
 
+  // recipe menu option
   if (clicked_element.id === "recipe") {
     let default_recipes = await getDefaultRecipes();
+    displayRecipesPage(default_recipes.data.recipes);
 
     // display search page
-    render(searchPage(default_recipes.data.recipes));
-    hideBodyBackgroundImage();
-
-    let recipe_form = document.getElementById("recipe-form");
-    recipe_form.addEventListener("submit", async (e) => {
-      e.preventDefault();
-
-      let search_input_text = getSearchInputText(recipe_form);
-      let search_results = await searchForRecipe(search_input_text);
-      render(searchPage(search_results.data.recipes));
-      console.log("I'm working", search_results);
-    });
+    // render(
+    //   recipesPage(default_recipes.data.recipes, async (e) => {
+    //     e.preventDefault();
+    //     let recipe_form = document.getElementById("recipe-form");
+    //     let search_input_text = getSearchInputText(recipe_form);
+    //     let search_results = await searchForRecipe(search_input_text);
+    //     render(searchPage(search_results.data.recipes));
+    //   })
+    // );
   }
 });
-
-if (state === "search") {
-  let recipe_form = document.getElementById("recipe-form");
-  console.log(recipe_form);
-  // console.log("submitting", recipe_form);
-  recipe_form.addEventListener("submit", (e) => {
-    e.preventDefault();
-    console.log("working");
-  });
-}

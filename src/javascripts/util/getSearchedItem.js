@@ -13,7 +13,7 @@ export const getSearchInputText = (prop) => {
 
 const validateSearch = (prop) => {
   if (prop === "") {
-    alert("Search Input is empty!");
+    console.log("Search Input is empty!");
     return;
   }
 };
