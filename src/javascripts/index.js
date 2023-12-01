@@ -7,6 +7,7 @@ import { fetchRecipes } from "./util/fetchRecipes.js";
 import { baseURL } from "../config/config.js";
 import "../css/style.css";
 
+// alert("working");
 // render home page when browser loads
 window.addEventListener("load", () => {
   displayHomePage();

@@ -3,7 +3,8 @@ import { displayRecipesPage } from "./displayRecipes";
 import { fetchRecipes } from "./fetchRecipes";
 import { baseURL } from "../../config/config";
 
-export const searchForRecipe = async () => {
+export const searchForRecipe = async (e) => {
+  e.preventDefault();
   let recipe_form = document.getElementById("recipe-form");
   let search_input_text = getSearchInputText(recipe_form);
 
