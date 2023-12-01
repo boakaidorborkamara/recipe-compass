@@ -6,6 +6,8 @@ import { getRecipeDetails } from "./util/getRecipeDetails.js";
 import { fetchRecipes } from "./util/fetchRecipes.js";
 import { baseURL } from "../config/config.js";
 import "../css/style.css";
+import { render } from "./util/renderElements.js";
+import { detailPage } from "./components/pages/details-page.js";
 
 // alert("working");
 // render home page when browser loads
@@ -42,6 +44,7 @@ document.addEventListener("click", async (e) => {
       `${baseURL}/recipes/${selected_recipe_id}?key=30688396-ef45-4237-ab82-58f2e7c5486c`
     );
     console.log("btn", clicked_element, selected_recipe_id);
-    console.log("details", recipe_details);
+    console.log("details", recipe_details.data.recipe);
+    render(detailPage(recipe_details.data.recipe));
   }
 });
