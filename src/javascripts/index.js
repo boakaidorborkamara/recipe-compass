@@ -43,4 +43,9 @@ document.addEventListener("click", async (e) => {
   if (clicked_element.classList.contains("recipe-details-btn")) {
     displayDetailsPage(clicked_element);
   }
+
+  if (clicked_element.id === "back-btn") {
+    let default_recipes = await getDefaultRecipes();
+    displayRecipesPage(default_recipes.data.recipes, searchForRecipe);
+  }
 });

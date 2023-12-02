@@ -7,8 +7,8 @@ export const detailPage = (prop) => {
   //   html
   let detials_section = `
     <seciton class="container py-5 d-flex justify-content-between">
-                <button type="button" class="btn btn-success">Back to Recipe List</button>
-                <button type="button" class="btn btn-light"><i class="bi bi-bookmark"></i> Bookmark</button>
+                <button type="button" class="btn btn-success" id="back-btn">Back to Recipe List</button>
+                <button type="button" class="btn btn-light" id="bookmark-btn"><i class="bi bi-bookmark"></i> Bookmark</button>
             </seciton>
             <div class="d-flex gap-5 flex-wrap p-2">
                 <div class="col-6">
