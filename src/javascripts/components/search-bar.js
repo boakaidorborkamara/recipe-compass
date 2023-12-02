@@ -27,13 +27,13 @@ export const searchBar = (callback) => {
 
   //form
   let form = document.createElement("form");
-  form.classList.add("form-inline", "d-flex", "w-50");
+  form.classList.add("form-inline", "d-flex", "w-75");
   form.id = "recipe-form";
   form.onsubmit = callback;
 
   // input
   let input = document.createElement("input");
-  input.classList.add("form-control", "mr-sm-2", "rounded-0", "shadow-sm");
+  input.classList.add("form-control", "rounded-0", "shadow-sm");
   input.setAttribute("placeholder", "tomato, potatoe, pizza");
   input.setAttribute("aria-label", "Search");
   input.setAttribute("required", "");
@@ -43,7 +43,7 @@ export const searchBar = (callback) => {
   button.classList.add("btn", "btn-success", "my-2", "my-sm-0", "rounded-0");
   button.setAttribute("type", "submit");
   button.id = "submit-search-btn";
-  button.innerText = "Search";
+  button.innerHTML = `<i class="bi bi-search-heart-fill"></i>`;
 
   // append children elements
   form.appendChild(input);

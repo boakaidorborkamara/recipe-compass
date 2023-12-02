@@ -15,5 +15,5 @@ An app that provides recipe ideas. I started this project back when I started le
 - [x] Display default recipes
 - [x] Search for recipes
 - [x] Display recipes based on user search
-- [ ] See details for each recipe option
+- [x] See details for each recipe option
 - [ ] Bookmark recipe
