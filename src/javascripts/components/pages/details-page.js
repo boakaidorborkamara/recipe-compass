@@ -4,30 +4,7 @@ export const detailPage = (prop) => {
   let parent_div = document.createElement("div");
   parent_div.classList.add("container");
 
-  console.log(ingredients);
-
-  //   //   back btn section
-  //   let back_btn_section = document.createElement("section");
-  //   back_btn_section.classList.add(
-  //     "container",
-  //     "py-5",
-  //     "d-flex",
-  //     "justify-content-between"
-  //   );
-
-  //   //   back btn
-  //   let back_btn = document.createElement("button");
-  //   back_btn.setAttribute("type", "button");
-  //   back_btn.classList.add("btn", "btn-success");
-  //   back_btn.innerText = "Back to Recipe List";
-
-  //   //   bookmark btn
-  //   let bookmark_btn = document.createElement("button");
-  //   back_btn.setAttribute("type", "button");
-  //   back_btn.classList.add("btn", "btn-light");
-  //   back_btn.innerHTML = `<i class="bi bi-bookmark"></i>`;
-  //   back_btn.innerText = "Bookmark";
-
+  //   html
   let detials_section = `
     <seciton class="container py-5 d-flex justify-content-between">
                 <button type="button" class="btn btn-success">Back to Recipe List</button>
@@ -56,7 +33,6 @@ export const detailPage = (prop) => {
                     </div>
                     <h2 class="mt-4 fw-bold">Recipe Ingredients</h2>
                     <ul>
-                        
                         ${generate_list(ingredients)}
                     </ul>
 
@@ -69,45 +45,33 @@ export const detailPage = (prop) => {
   `;
 
   parent_div.insertAdjacentHTML("beforeend", detials_section);
-
   return parent_div;
 };
 
+/**
+ * loop through ingredients and generate & return HTML list elements
+ *
+ * @param {array} items
+ * @returns array
+ */
 const generate_list = (items) => {
-  console.log("item", items);
   let list_items = [];
-  //   for (let i = 0; i < items.length; i++) {
-  //     console.log(i);
-  //     list_item = `<li class="my-2 py-2 border-bottom border-dark d-flex align-items-start">
-  //                               <div class="m-0">
-  //                                 <h6 class="fw-bolder m-0 text-success py-2">
-  //                                   <i class="bi bi-check-square-fill"></i>{" "}
-  //                                   short-grain white rice
-  //                                 </h6>
-  //                                 <p class="m-0">Quantity: 1</p>
-  //                                 <p class="m-0">Unit: 1</p>
-  //                               </div>
-  //     </li>`;
-  //     console.log(list_item);
-  //   }
-
-  //   return list_item;
 
   items.forEach((ingredient) => {
-    list_items.push(`<li class="my-2 py-2 border-bottom border-dark d-flex align-items-start">
-                                <div class="m-0">
-                                  <h6 class="fw-bolder m-0 text-success py-2">
-                                    <i class="bi bi-check-square-fill"></i>
-                                    ${ingredient.description}
-                                  </h6>
-                                  <p class="m-0"><span>Quantity:</span> ${ingredient.quantity}</p>
-                                  <p class="m-0">Unit: ${ingredient.unit}</p>
-                                </div>
-      </li>`);
-
-    console.log(list_items);
+    list_items.push(`
+        <li class="my-2 py-2 border-bottom border-dark d-flex align-items-start">
+            <div class="m-0">
+                <h6 class="fw-bolder m-0 text-success py-2">
+                <i class="bi bi-check-square-fill"></i>${ingredient.description}
+                </h6>
+                <p class="m-0">
+                <span>Quantity:</span> ${ingredient.quantity}
+                </p>
+                <p class="m-0">Unit: ${ingredient.unit}</p>
+            </div>
+        </li>;
+    `);
   });
 
-  console.log(list_items);
   return list_items;
 };

@@ -22,7 +22,7 @@ export const searchBar = (callback) => {
 
   // heading h1
   let h1 = document.createElement("h1");
-  h1.classList.add("text-dark", "fw-bolder");
+  h1.classList.add("text-dark", "fw-bolder", "shadow-sm");
   h1.innerText = "Let's explore recipes";
 
   //form

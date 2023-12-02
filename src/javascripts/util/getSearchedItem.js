@@ -1,6 +1,5 @@
 import { fetchRecipes } from "./fetchRecipes";
 import { baseURL } from "../../config/config";
-import { render } from "./renderElements";
 
 export const getSearchInputText = (prop) => {
   let search_input = prop.children[0];
@@ -27,7 +26,3 @@ export const searchForRecipe = async (prop) => {
 
   return search_results;
 };
-
-// export const displaySearchResults(prop){
-
-// }
