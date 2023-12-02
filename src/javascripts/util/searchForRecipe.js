@@ -1,5 +1,6 @@
 import { getSearchInputText } from "./getSearchedItem";
 import { displayRecipesPage } from "./displayRecipes";
+import { updateRecipesResultTitle } from "./updateRecipesResultTitle";
 import { fetchRecipes } from "./fetchRecipes";
 import { baseURL } from "../../config/config";
 
@@ -12,5 +13,10 @@ export const searchForRecipe = async (e) => {
     `${baseURL}/recipes?search=${search_input_text}&key=30688396-ef45-4237-ab82-58f2e7c5486c`
   );
 
-  displayRecipesPage(search_results.data.recipes, searchForRecipe);
+  if (search_results.results !== 0) {
+    displayRecipesPage(search_results.data.recipes, searchForRecipe);
+    updateRecipesResultTitle(search_input_text);
+  } else {
+    alert(`No result for ${search_input_text}`);
+  }
 };
