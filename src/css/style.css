@@ -1,5 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Saira+Semi+Condensed:wght@100;700&family=Titillium+Web:wght@200;600;900&display=swap');
+
+:root{
+   --font-family-cursive:'Caveat', cursive;
+    --font-family-san-serif: 'Saira Semi Condensed', sans-serif;
+    --font-family-tit: 'Titillium Web', sans-serif;
+}
+
 body{
     font-family: 'Caveat', cursive;
+        font-family: 'Saira Semi Condensed', sans-serif;
+        font-family: 'Titillium Web', sans-serif;
 }
 
 #home-page{

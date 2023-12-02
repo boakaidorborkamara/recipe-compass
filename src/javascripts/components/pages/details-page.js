@@ -54,7 +54,7 @@ export const detailPage = (prop) => {
                             <p>${prop.servings} serve</p>
                         </div>
                     </div>
-                    <h2 class="mt-4">Recipe Ingredients</h2>
+                    <h2 class="mt-4 fw-bold">Recipe Ingredients</h2>
                     <ul>
                         
                         ${generate_list(ingredients)}
@@ -100,7 +100,7 @@ const generate_list = (items) => {
                                     <i class="bi bi-check-square-fill"></i>
                                     ${ingredient.description}
                                   </h6>
-                                  <p class="m-0">Quantity: ${ingredient.quantity}</p>
+                                  <p class="m-0"><span>Quantity:</span> ${ingredient.quantity}</p>
                                   <p class="m-0">Unit: ${ingredient.unit}</p>
                                 </div>
       </li>`);
